@@ -17,7 +17,7 @@ class Auth extends CI_Controller {
     $this->form_validation->set_rules('password', 'Password', 'trim|required', [
       'required' => "Password harus diisi"]);
     if($this->form_validation->run() == false){
-      $data['title'] = 'E-KSTM - Masuk';
+      $data['title'] = 'Masuk';
       $this->load->view('templates/auth_header', $data);
       $this->load->view('auth/login');
       $this->load->view('templates/auth_footer');
@@ -82,7 +82,7 @@ class Auth extends CI_Controller {
     $this->form_validation->set_rules('password2','Password2','trim|matches[password1]');
     if($this->form_validation->run() == false){
 
-      $data['title'] = 'E-KSTM - Daftar';
+      $data['title'] = 'Daftar';
       $this->load->view('templates/auth_header', $data);
       $this->load->view('auth/registration');
       $this->load->view('templates/auth_footer');
@@ -166,7 +166,7 @@ class Auth extends CI_Controller {
         ]);
         $this->form_validation->set_rules('new_password2', 'Confirm New Password', 'required|trim|min_length[3]|matches[new_password1]');
         $data['form'] = 'ganti password';
-        $data['title'] = 'E-KSTM - Lupa Password';
+        $data['title'] = 'Lupa Password';
         if($this->form_validation->run() == false){
           $this->load->view('templates/auth_header', $data);
           $this->load->view('auth/lupapassword');
@@ -201,7 +201,7 @@ class Auth extends CI_Controller {
       ]);
 
       if($this->form_validation->run() == false){
-        $data['title'] = 'E-KSTM - Lupa Password';
+        $data['title'] = 'Lupa Password';
         $data['form'] = 'isi email';
         $this->load->view('templates/auth_header', $data);
         $this->load->view('auth/lupapassword');
@@ -244,22 +244,22 @@ class Auth extends CI_Controller {
   private function _sendEmail($token, $type){
      $config = [
        'protocol'  => 'smtp',
-       'smtp_host' => 'mail.e-kstm.com',
-       'smtp_user' => 'no-reply@e-kstm.com',
-       'smtp_pass' => 'E-KSTM123',
+       'smtp_host' => 'ngobrolkuy.kulitekno.com',
+       'smtp_user' => 'no-replay@ngobrolkuy.kulitekno.com',
+       'smtp_pass' => 'ngobrolkuy2020',
        'smtp_port' => 465,
        'mailtype'  => 'html',
        'charset' => 'utf-8',
        'newline' => "\r\n",
      ];
      $this->load->library('email', $config);
-     $this->email->from('no-reply@e-kstm.com', 'e-kstm');
+     $this->email->from('no-replay@ngobrolkuy.kulitekno.com', 'NgobrolKuy');
      $this->email->to($this->input->post('email'));
 
      if($type == 'verify'){
-       $this->email->subject('e-KSTM - Verifikasi Akun');
+       $this->email->subject('NgobrolKuy - Verifikasi Akun');
        $message = '<html><head>';
-       $message = '<title>E-KSTM - email verif<title>';
+       $message = '<title>NgobrolKuy - email verif<title>';
        $message = '<head><body>';
        $message .= '<p>Klik link ini untuk aktivasi akun : <a href="'. base_url() . 'auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Aktifkan</a></p>';
        $message .= '<p>atau salin</p> <p>link: '. base_url() . 'auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '</p>';
@@ -267,9 +267,9 @@ class Auth extends CI_Controller {
        $this->email->message($message);
        $this->email->set_mailtype('html');
      } elseif ($type == 'lupaPassword') {
-       $this->email->subject('e-KSTM - Lupa Password');
+       $this->email->subject('NgobrolKuy - Lupa Password');
        $message = '<html><head>';
-       $message = '<title>E-KSTM - lupa password<title>';
+       $message = '<title>NgobrolKuy - lupa password<title>';
        $message = '<head><body>';
        $message .= '<p>Klik link ini untuk ganti password : <a href="'. base_url() . 'auth/lupapassword/token?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Ganti Password</a></p>';
        $message .= '<p>atau salin</p> <p>link: '. base_url() . 'auth/lupapassword/token?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '</p>';
