@@ -98,7 +98,7 @@ class Auth extends CI_Controller {
         'date_create' => time()
 
       ];
-      $pesan = '<div class="alert alert-success" role="alert"> Yey, Selamat '.$this->input->post('fullname').'!! akun kamu sudah terdaftar, email aktivasi sudah terkirim dan akan valid selama a24 jam. Coba cek pada bagian spam bila belum muncul. </div>';
+      $pesan = '<div class="alert alert-success" role="alert"> Yey, Selamat '.$this->input->post('fullname').'!! akun kamu sudah terdaftar, email aktivasi sudah terkirim dan akan valid selama 24 jam. Coba cek pada bagian spam bila belum muncul. </div>';
 
       //siapkan token
       $token = base64_encode(random_bytes(32));
