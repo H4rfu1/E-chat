@@ -1,0 +1,11 @@
+<FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css)$">
+<IfModule mod_headers.c>
+    Header add Access-Control-Allow-Origin "https://e-kstm.com"
+</IfModule>
+</FilesMatch>
+<IfModule authz_core_module>
+    Require all denied
+</IfModule>
+<IfModule !authz_core_module>
+    Deny from all
+</IfModule>
