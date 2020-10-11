@@ -521,13 +521,13 @@
 }
 @media screen and (max-width: 735px) {
   #frame .content {
-    width: calc(100% - 58px);
+    width: calc(100%);
     min-width: 300px !important;
   }
 }
 @media screen and (min-width: 900px) {
   #frame .content {
-    width: calc(100% - 340px);
+    width: calc(100%);
   }
 }
 #frame .content .contact-profile {
