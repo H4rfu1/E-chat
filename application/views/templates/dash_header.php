@@ -244,7 +244,7 @@
 
 </head>
 
-<body id="page-top" style="padding:0;">
+<body id="page-top" style="padding:0;" <?= $tittle == 'ngobrol'?'onload="content_load()"' :'';?> >
 
   <!-- Page Wrapper -->
   <div id="wrapper">

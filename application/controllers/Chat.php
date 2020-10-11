@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Forum extends CI_Controller {
+class Chat extends CI_Controller {
 
   public function __construct(){
     parent::__construct();
@@ -12,15 +12,14 @@ class Forum extends CI_Controller {
 
   public function index($page = 0){
     $breadcrumb         = array(
-            "Forum" => ""
+            "Chat" => ""
         );
     $data['breadcrumb'] = $breadcrumb;
 
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-    $data['title'] = 'Forum';
+    $data['title'] = 'Chat';
     $data['page'] = $page;
 
-    $this->load->model('Forum_model', 'forum');
     $data['cari'] = '';
     if($this->input->post('search')!= null){
       $this->form_validation->set_rules('cari','Cari', 'required',[
@@ -39,7 +38,7 @@ class Forum extends CI_Controller {
       $this->load->view('templates/dash_header', $data);
       $this->load->view('templates/dash_sidebar', $data);
       $this->load->view('templates/dash_topbar', $data);
-      $this->load->view('forum/chat2', $data);
+      $this->load->view('chat/chat2', $data);
       $this->load->view('templates/dash_footer');
       // $this->load->view('forum/chat', $data);
     }else {
@@ -87,18 +86,14 @@ class Forum extends CI_Controller {
 
   }
 
-  public function diskusi($id = 0){
+  public function ngobrol($id = 0){
     $breadcrumb         = array(
-            "Forum" => "forum",
-            "Diskusi" => ""
+            "Chat" => "chat",
+            "Ngobrol" => ""
         );
     $data['breadcrumb'] = $breadcrumb;
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-    $data['title'] = 'Forum';
-
-    $this->load->model('Forum_model', 'forum');
-    $data['forum'] = $this->forum->getCertainForum($id);
-    $data['komen'] = $this->forum->getKomen($id);
+    $data['title'] = 'ngobrol';
 
 
     $this->form_validation->set_rules('isi_tanggapan','Isi tanggapan', 'required', [
@@ -108,8 +103,8 @@ class Forum extends CI_Controller {
       $this->load->view('templates/dash_header', $data);
       $this->load->view('templates/dash_sidebar', $data);
       $this->load->view('templates/dash_topbar', $data);
-      $this->load->view('forum/diskusi', $data);
-      $this->load->view('templates/dash_footer');
+      $this->load->view('chat/diskusi', $data);
+      $this->load->view('templates/dash_footer', $data);
     }else {
       $data = [
         'id_penanggap' => $this->session->userdata('id'),
@@ -122,7 +117,7 @@ class Forum extends CI_Controller {
         $pesan = '<div class="alert alert-success" role="alert"> Komen berhasil ditambah </div>';
         $this->session-> set_flashdata('message', $pesan);
       }
-      redirect('forum/diskusi/'.$id);
+      redirect('chat/diskusi/'.$id);
     }
 
   }

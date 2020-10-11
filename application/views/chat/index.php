@@ -46,11 +46,11 @@
         ?>
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="<?= base_url('assets/img/forum/') . $f['foto']; ?>" alt="Card image cap" style="max-height:300px;">
+          <img class="card-img-top" src="<?= base_url('assets/img/chat/') . $f['foto']; ?>" alt="Card image cap" style="max-height:300px;">
           <div class="card-body">
             <h2 class="card-title" style="color: black;"><?= $f['topik_bahasan'] ?></h2>
             <p class="card-text"><?= substr($f['keterangan_bahasan'], 0, 200) ?>...</p>
-            <a href="<?= base_url('forum/diskusi/');echo $f['id_forum']; ?>" class="btn btn-primary">Baca lebih &rarr;</a>
+            <a href="<?= base_url('chat/ngobrol/');echo $f['id_forum']; ?>" class="btn btn-primary">Baca lebih &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Di muat pada <?= date('d F Y, h:i:s A', $f['tanggal_dibuat']); ?>
