@@ -563,14 +563,14 @@
 	}
 	#frame .content .messages {
 	  height: auto;
-	  min-height: calc(100% - 93px);
-	  max-height: calc(100% - 93px);
+	  min-height: calc(100%);
+	  max-height: calc(100%);
 	  overflow-y: scroll;
 	  overflow-x: hidden;
 	}
 	@media screen and (max-width: 735px) {
 	  #frame .content .messages {
-	    max-height: calc(100% - 105px);
+	    max-height: calc(100%);
 	  }
 	}
 	#frame .content .messages::-webkit-scrollbar {
@@ -585,7 +585,7 @@
 	  clear: both;
 	  float: left;
 	  margin: 15px 15px 5px 15px;
-	  width: calc(100% - 25px);
+	  width: calc(100%);
 	  font-size: 0.9em;
 	}
 	#frame .content .messages ul li:nth-last-child(1) {
