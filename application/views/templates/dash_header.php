@@ -26,24 +26,13 @@
   <link href="<?php echo base_url('assets/') ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
-	
+
   <!-- Custom styles for this template-->
   <link href="<?= base_url('assets/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
 	<link href="<?= base_url('assets/'); ?>css/blog-home.css" rel="stylesheet">
 	<link href="<?= base_url('assets/'); ?>css/blog-post.css" rel="stylesheet">
 
 	<style class="cp-pen-styles">body {
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  min-height: 100vh;
-	  background: #27ae60;
-	  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
-	  font-size: 1em;
-	  letter-spacing: 0.1px;
-	  color: #32465a;
-	  text-rendering: optimizeLegibility;
-	  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 	  -webkit-font-smoothing: antialiased;
 	}
 
