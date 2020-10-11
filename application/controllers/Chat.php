@@ -103,7 +103,7 @@ class Chat extends CI_Controller {
       $this->load->view('templates/dash_header', $data);
       $this->load->view('templates/dash_sidebar', $data);
       $this->load->view('templates/dash_topbar', $data);
-      $this->load->view('chat/diskusi', $data);
+      $this->load->view('chat/ngobrol', $data);
       $this->load->view('templates/dash_footer', $data);
     }else {
       $data = [
