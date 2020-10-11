@@ -36,12 +36,12 @@ class Forum extends CI_Controller {
     }
 
     if($this->form_validation->run() == false){
-      // $this->load->view('templates/dash_header', $data);
-      // $this->load->view('templates/dash_sidebar', $data);
-      // $this->load->view('templates/dash_topbar', $data);
-      // $this->load->view('forum/index', $data);
-      // $this->load->view('templates/dash_footer');
-      $this->load->view('forum/chat', $data);
+      $this->load->view('templates/dash_header', $data);
+      $this->load->view('templates/dash_sidebar', $data);
+      $this->load->view('templates/dash_topbar', $data);
+      $this->load->view('forum/chat2', $data);
+      $this->load->view('templates/dash_footer');
+      // $this->load->view('forum/chat', $data);
     }else {
       if ($this->input->post('search')!= null) {
         $this->load->view('templates/dash_header', $data);
