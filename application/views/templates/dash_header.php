@@ -244,7 +244,7 @@
 
 </head>
 
-<body id="page-top" style="padding:0;" <?= $tittle == 'ngobrol'?'onload="content_load()"' :'';?> >
+<body id="page-top" style="padding:0;" <?= $title == 'ngobrol'?'onload="content_load()"' :'';?> >
 
   <!-- Page Wrapper -->
   <div id="wrapper">
