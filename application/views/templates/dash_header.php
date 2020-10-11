@@ -32,6 +32,9 @@
 	<link href="<?= base_url('assets/'); ?>css/blog-home.css" rel="stylesheet">
 	<link href="<?= base_url('assets/'); ?>css/blog-post.css" rel="stylesheet">
 
+
+	<script src="https://use.typekit.net/hoy3lrg.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<style class="cp-pen-styles">
 
 	#frame {
