@@ -304,7 +304,7 @@
 	  border-radius: 3px;
 	  color: #f5f5f5;
 	  padding: 7px;
-	  width: calc(100% - 43px);
+	  width: calc(100%);
 	}
 	#frame #sidepanel #profile .wrap #expanded input:focus {
 	  outline: none;
@@ -327,7 +327,7 @@
 	#frame #sidepanel #search input {
 	  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
 	  padding: 10px 0 10px 46px;
-	  width: calc(100% - 25px);
+	  width: calc(100%);
 	  border: none;
 	  background: #32465a;
 	  color: #f5f5f5;
@@ -349,13 +349,13 @@
 	  color: #f5f5f5;
 	}
 	#frame #sidepanel #contacts {
-	  height: calc(100% - 177px);
+	  height: calc(100%);
 	  overflow-y: scroll;
 	  overflow-x: hidden;
 	}
 	@media screen and (max-width: 735px) {
 	  #frame #sidepanel #contacts {
-	    height: calc(100% - 149px);
+	    height: calc(100%);
 	    overflow-y: scroll;
 	    overflow-x: hidden;
 	  }
@@ -364,7 +364,7 @@
 	  }
 	}
 	#frame #sidepanel #contacts.expanded {
-	  height: calc(100% - 334px);
+	  height: calc(100%);
 	}
 	#frame #sidepanel #contacts::-webkit-scrollbar {
 	  width: 8px;
@@ -640,7 +640,7 @@
 	  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
 	  float: left;
 	  border: none;
-	  width: calc(100% - 90px);
+	  width: calc(100%);
 	  padding: 11px 32px 10px 8px;
 	  font-size: 0.8em;
 	  color: #32465a;
