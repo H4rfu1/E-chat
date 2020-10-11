@@ -21,18 +21,18 @@ class Chat extends CI_Controller {
     $data['page'] = $page;
 
     $data['cari'] = '';
-    if($this->input->post('search')!= null){
-      $this->form_validation->set_rules('cari','Cari', 'required',[
-        'required' => "Kata kunci pencarian harus diisi"]);
-      $data['forum'] = $this->forum->getSearchForum(htmlspecialchars($this->input->post('cari'), ENT_QUOTES, 'UTF-8'));
-      $data['cari'] = $this->input->post('cari');
-    }else {
-      $data['forum'] = $this->forum->getAllForum();
-      $this->form_validation->set_rules('topik_bahasan','Judul','required', [
-        'required' => "Judul harus diisi"]);
-      $this->form_validation->set_rules('keterangan_bahasan','Isi bahasan','required', [
-        'required' => "Keterangan Bahasan harus diisi"]);
-    }
+    // if($this->input->post('search')!= null){
+    //   $this->form_validation->set_rules('cari','Cari', 'required',[
+    //     'required' => "Kata kunci pencarian harus diisi"]);
+    //   $data['forum'] = $this->forum->getSearchForum(htmlspecialchars($this->input->post('cari'), ENT_QUOTES, 'UTF-8'));
+    //   $data['cari'] = $this->input->post('cari');
+    // }else {
+    //   $data['forum'] = $this->forum->getAllForum();
+    //   $this->form_validation->set_rules('topik_bahasan','Judul','required', [
+    //     'required' => "Judul harus diisi"]);
+    //   $this->form_validation->set_rules('keterangan_bahasan','Isi bahasan','required', [
+    //     'required' => "Keterangan Bahasan harus diisi"]);
+    // }
 
     if($this->form_validation->run() == false){
       $this->load->view('templates/dash_header', $data);
