@@ -514,7 +514,7 @@
 }
 #frame .content {
   float: right;
-  width: 60%;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -699,6 +699,8 @@ Codepen: https://codepen.io/emilcarlsson/
 Website: http://emilcarlsson.se/
 
 -->
+
+<div id="frame">
 	<div class="content">
 		<div class="contact-profile">
 			<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
@@ -753,6 +755,7 @@ Website: http://emilcarlsson.se/
 			</div>
 		</div>
 	</div>
+</div>
 <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 <script >$(".messages").animate({ scrollTop: $(document).height() }, "fast");
 
