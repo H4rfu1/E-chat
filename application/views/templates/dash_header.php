@@ -26,16 +26,26 @@
   <link href="<?php echo base_url('assets/') ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
-
+	
   <!-- Custom styles for this template-->
   <link href="<?= base_url('assets/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
 	<link href="<?= base_url('assets/'); ?>css/blog-home.css" rel="stylesheet">
 	<link href="<?= base_url('assets/'); ?>css/blog-post.css" rel="stylesheet">
 
-
-	<script src="https://use.typekit.net/hoy3lrg.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	<style class="cp-pen-styles">
+	<style class="cp-pen-styles">body {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  min-height: 100vh;
+	  background: #27ae60;
+	  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+	  font-size: 1em;
+	  letter-spacing: 0.1px;
+	  color: #32465a;
+	  text-rendering: optimizeLegibility;
+	  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+	  -webkit-font-smoothing: antialiased;
+	}
 
 	#frame {
 	  width: 95%;
@@ -304,7 +314,7 @@
 	  border-radius: 3px;
 	  color: #f5f5f5;
 	  padding: 7px;
-	  width: calc(100%);
+	  width: calc(100% - 43px);
 	}
 	#frame #sidepanel #profile .wrap #expanded input:focus {
 	  outline: none;
@@ -327,7 +337,7 @@
 	#frame #sidepanel #search input {
 	  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
 	  padding: 10px 0 10px 46px;
-	  width: calc(100%);
+	  width: calc(100% - 25px);
 	  border: none;
 	  background: #32465a;
 	  color: #f5f5f5;
@@ -349,13 +359,13 @@
 	  color: #f5f5f5;
 	}
 	#frame #sidepanel #contacts {
-	  height: calc(100%);
+	  height: calc(100% - 177px);
 	  overflow-y: scroll;
 	  overflow-x: hidden;
 	}
 	@media screen and (max-width: 735px) {
 	  #frame #sidepanel #contacts {
-	    height: calc(100%);
+	    height: calc(100% - 149px);
 	    overflow-y: scroll;
 	    overflow-x: hidden;
 	  }
@@ -364,7 +374,7 @@
 	  }
 	}
 	#frame #sidepanel #contacts.expanded {
-	  height: calc(100%);
+	  height: calc(100% - 334px);
 	}
 	#frame #sidepanel #contacts::-webkit-scrollbar {
 	  width: 8px;
@@ -566,15 +576,14 @@
 	}
 	#frame .content .messages {
 	  height: auto;
-		margin: 0;
-	  min-height: calc(100%);
-	  max-height: calc(100%);
+	  min-height: calc(100% - 93px);
+	  max-height: calc(100% - 93px);
 	  overflow-y: scroll;
 	  overflow-x: hidden;
 	}
 	@media screen and (max-width: 735px) {
 	  #frame .content .messages {
-	    max-height: calc(100%);
+	    max-height: calc(100% - 105px);
 	  }
 	}
 	#frame .content .messages::-webkit-scrollbar {
@@ -589,7 +598,7 @@
 	  clear: both;
 	  float: left;
 	  margin: 15px 15px 5px 15px;
-	  width: calc(100%);
+	  width: calc(100% - 25px);
 	  font-size: 0.9em;
 	}
 	#frame .content .messages ul li:nth-last-child(1) {
@@ -640,7 +649,7 @@
 	  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
 	  float: left;
 	  border: none;
-	  width: calc(100%);
+	  width: calc(100% - 90px);
 	  padding: 11px 32px 10px 8px;
 	  font-size: 0.8em;
 	  color: #32465a;
